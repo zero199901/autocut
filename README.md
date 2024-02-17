@@ -109,6 +109,9 @@ docker build -t autocut .
 
 ```bash
 docker run -it --rm -v E:\autocut:/autocut/video autocut /bin/bash
+
+
+docker run -it --rm -v D:\code\python\docker\autocut\video:/autocut/video autocut /bin/bash
 ```
 
 其中 `-v` 是将主机存放视频的文件夹 `E:\autocut` 映射到虚拟机的 `/autocut/video` 目录。`E:\autocut` 是主机存放视频的目录，需修改为自己主机存放视频的目录。
@@ -203,7 +206,7 @@ autocut -c 22-52-00.mp4 22-52-00.srt 22-52-00.md
 4. **能不能使用 `pip` 安装?**
 
     whisper已经发布到PyPI了，可以直接用`pip install openai-whisper`安装。
-   
+
    [https://github.com/openai/whisper#setup](https://github.com/openai/whisper#setup)
 
    [https://pypi.org/project/openai-whisper/](https://pypi.org/project/openai-whisper/)
